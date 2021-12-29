@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="FrameworkDetectionExcludesConfiguration">
+    <file type="web" url="file://$PROJECT_DIR$/springboot-web-vip-2" />
+  </component>
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/alipay-springboot/pom.xml" />
+        <option value="$PROJECT_DIR$/balance-springboot/pom.xml" />
+        <option value="$PROJECT_DIR$/custom-spring-boot-starter-autoconfigurer/pom.xml" />
+        <option value="$PROJECT_DIR$/jackTemplate-springboot-starter/pom.xml" />
+        <option value="$PROJECT_DIR$/springboot-web-vip-2/pom.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="11" project-jdk-type="JavaSDK" />
+</project>

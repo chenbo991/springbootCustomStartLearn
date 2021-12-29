@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/alipay-springboot/alipay-springboot.iml" filepath="$PROJECT_DIR$/alipay-springboot/alipay-springboot.iml" />
+      <module fileurl="file://$PROJECT_DIR$/balance-springboot/balance-springboot.iml" filepath="$PROJECT_DIR$/balance-springboot/balance-springboot.iml" />
+      <module fileurl="file://$PROJECT_DIR$/custom-spring-boot-starter-autoconfigurer/custom-spring-boot-starter-autoconfigurer.iml" filepath="$PROJECT_DIR$/custom-spring-boot-starter-autoconfigurer/custom-spring-boot-starter-autoconfigurer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jackTemplate-springboot-starter/jackTemplate-spring-boot-starter.iml" filepath="$PROJECT_DIR$/jackTemplate-springboot-starter/jackTemplate-spring-boot-starter.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jackTemplate-springboot-starter/jackTemplate-springboot-starter.iml" filepath="$PROJECT_DIR$/jackTemplate-springboot-starter/jackTemplate-springboot-starter.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springboot-web-vip-2/spring-boot-web.iml" filepath="$PROJECT_DIR$/springboot-web-vip-2/spring-boot-web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jackTemplate-springboot-starter/springcloud-eureka/springcloud-eureka.iml" filepath="$PROJECT_DIR$/jackTemplate-springboot-starter/springcloud-eureka/springcloud-eureka.iml" />
+    </modules>
+  </component>
+</project>
