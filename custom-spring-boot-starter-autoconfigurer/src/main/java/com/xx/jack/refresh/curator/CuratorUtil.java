@@ -31,11 +31,11 @@ public class CuratorUtil implements ApplicationContextAware {
 //todo 改为redis的注册发布。去掉zookeeper.
 
 
-//    private static String connnectStr = "192.168.67.139:2181";
+    private static String connnectStr = "192.168.67.139:6379";
 
     private static CuratorFramework client;
 
-//    private static String path = "/config";
+    private static String path = "/config";
 
 //    @Value(("${zookeeper.config.enable:false}"))
 //    private boolean enbale;
