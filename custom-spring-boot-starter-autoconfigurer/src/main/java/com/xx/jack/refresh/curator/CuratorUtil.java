@@ -134,9 +134,15 @@ public class CuratorUtil implements ApplicationContextAware {
             final PathChildrenCache pathChildrenCache = new PathChildrenCache(client, path, false);
             pathChildrenCache.start(PathChildrenCache.StartMode.POST_INITIALIZED_EVENT);
 
+
+            //堆节点的订阅通知接口。有修改。这个就被触发。
             pathChildrenCache.getListenable().addListener(new PathChildrenCacheListener() {
                 @Override
                 public void childEvent(CuratorFramework client, PathChildrenCacheEvent event) throws Exception {
+
+
+                    //调整Environment对象的值。
+
                     switch (event.getType()) {
                         case CHILD_ADDED:
                             System.out.println("增加了节点");
@@ -154,6 +160,7 @@ public class CuratorUtil implements ApplicationContextAware {
                             break;
                     }
                     //对refresh作用域的实例进行刷新
+                    //堆添加了@scope的类，进行重新的初始化
                     refreshBean();
                 }
             });
@@ -169,7 +176,7 @@ public class CuratorUtil implements ApplicationContextAware {
             if(scopeName.equals(beanDefinition.getScope())) {
                 //先删除,,,,思考，如果这时候删除了bean，有没有问题？
                 applicationContext.getBeanFactory().destroyScopedBean(beanDefinitionName);
-                //在实例化
+                //在实例化初始化每一个bean
                 applicationContext.getBean(beanDefinitionName);
             }
         }
