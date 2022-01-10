@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="22b3230e-74e3-44c5-9f8a-fb5927015166" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/chenbo-springboot-starter/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/chenbo-springboot-starter/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot-web-vip-2" beforeDir="false" afterPath="$PROJECT_DIR$/springboot-web-vip-2" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/springboot-web-vip-2/LOG_PATH_IS_UNDEFINED/error-20200211.log.0" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/springboot-web-vip-2/LOG_PATH_IS_UNDEFINED/error.log" beforeDir="false" afterPath="$PROJECT_DIR$/springboot-web-vip-2/LOG_PATH_IS_UNDEFINED/error.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/springboot-web-vip-2/LOG_PATH_IS_UNDEFINED/info-20200211.log.0" beforeDir="false" />
@@ -16,7 +18,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/springboot-web-vip-2" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="22wFFpm4J9pnFZStxh5vnwxM7V4" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -33,7 +35,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/jackTemplate-springboot-starter" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/chenbo-springboot-starter/pom.xml" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -41,6 +43,53 @@
     </key>
   </component>
   <component name="RunManager" selected="Spring Boot.SpringbootTest">
+    <configuration default="true" type="JetRunConfigurationType" factoryName="Kotlin">
+      <module name="springcloud-eureka" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="WORKING_DIRECTORY" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType" factoryName="Kotlin script">
+      <module name="springcloud-eureka" />
+      <option name="filePath" />
+      <option name="vmParameters" />
+      <option name="alternativeJrePath" />
+      <option name="programParameters" />
+      <option name="passParentEnvs" value="true" />
+      <option name="workingDirectory" />
+      <option name="isAlternativeJrePathEnabled" value="false" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="filePath" />
+      <option name="vmParameters" />
+      <option name="alternativeJrePath" />
+      <option name="programParameters" />
+      <option name="passParentEnvs" value="true" />
+      <option name="workingDirectory" />
+      <option name="isAlternativeJrePathEnabled" value="false" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="WORKING_DIRECTORY" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="CustomSpringBootStarterAutoconfigurerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="custom-spring-boot-starter-autoconfigurer" />
       <extension name="coverage">
@@ -78,21 +127,48 @@
       <option name="presentableId" value="Default" />
       <updated>1640740641766</updated>
       <workItem from="1640740645328" duration="8897000" />
+      <workItem from="1640758680787" duration="1805000" />
+      <workItem from="1641456325295" duration="665000" />
+      <workItem from="1641548998559" duration="572000" />
     </task>
+    <task id="LOCAL-00001" summary="xiugia">
+      <created>1641549477659</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1641549477660</updated>
+    </task>
+    <task id="LOCAL-00002" summary="xiugia1">
+      <created>1641549559796</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1641549559796</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="xiugia" />
+    <MESSAGE value="xiugia1" />
+    <option name="LAST_COMMIT_MESSAGE" value="xiugia1" />
+  </component>
   <component name="WindowStateProjectService">
+    <state x="2265" y="112" key="CommitChangelistDialog2" timestamp="1641549558596">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="2265" y="112" key="CommitChangelistDialog2/0.0.1280.680/1920.0.1920.1040@1920.0.1920.1040" timestamp="1641549558596" />
     <state width="1006" height="466" key="DebuggerActiveHint" timestamp="1640747425235">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state width="1006" height="466" key="DebuggerActiveHint/0.0.1280.680/1920.0.1920.1040@1920.0.1920.1040" timestamp="1640747425235" />
-    <state x="2660" y="210" key="FileChooserDialogImpl" timestamp="1640750409709">
+    <state x="2660" y="210" key="FileChooserDialogImpl" timestamp="1640758700703">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state x="2660" y="210" key="FileChooserDialogImpl/0.0.1280.680/1920.0.1920.1040@1920.0.1920.1040" timestamp="1640750409709" />
+    <state x="2660" y="210" key="FileChooserDialogImpl/0.0.1280.680/1920.0.1920.1040@1920.0.1920.1040" timestamp="1640758700703" />
     <state width="1877" height="430" key="GridCell.Tab.0.bottom" timestamp="1640747486241">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>

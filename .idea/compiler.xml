@@ -7,10 +7,9 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="balance-springboot" />
-        <module name="spring-boot-web" />
         <module name="alipay-springboot" />
-        <module name="springcloud-eureka" />
+        <module name="spring-boot-web" />
+        <module name="balance-springboot" />
         <module name="custom-spring-boot-starter-autoconfigurer" />
       </profile>
     </annotationProcessing>

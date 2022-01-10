@@ -1,13 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Encoding">
-    <file url="file://$PROJECT_DIR$/alipay-springboot/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/alipay-springboot/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/balance-springboot/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/balance-springboot/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/chenbo-springboot-starter/springcloud-eureka/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/custom-spring-boot-starter-autoconfigurer/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/custom-spring-boot-starter-autoconfigurer/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/jackTemplate-springboot-starter/springcloud-eureka/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/springboot-web-vip-2/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/springboot-web-vip-2/src/main/resources" charset="UTF-8" />
   </component>

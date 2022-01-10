@@ -11,7 +11,13 @@
         <option value="$PROJECT_DIR$/custom-spring-boot-starter-autoconfigurer/pom.xml" />
         <option value="$PROJECT_DIR$/jackTemplate-springboot-starter/pom.xml" />
         <option value="$PROJECT_DIR$/springboot-web-vip-2/pom.xml" />
+        <option value="$PROJECT_DIR$/chenbo-springboot-starter/pom.xml" />
       </list>
+    </option>
+    <option name="ignoredFiles">
+      <set>
+        <option value="$PROJECT_DIR$/chenbo-springboot-starter/springcloud-eureka/pom.xml" />
+      </set>
     </option>
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="11" project-jdk-type="JavaSDK" />

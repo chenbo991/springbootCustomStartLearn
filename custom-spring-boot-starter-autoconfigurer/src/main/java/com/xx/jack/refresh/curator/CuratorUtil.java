@@ -25,6 +25,29 @@ import org.springframework.core.env.MutablePropertySources;
 import org.springframework.core.env.PropertySource;
 import org.springframework.stereotype.Component;
 
+/**
+ *
+ 分布式配置中心。特别是要解决@value的实现，动态刷新。
+
+ 解决environment的刷新比较简单。（这个environment是spring容器中的一个对象。可以直接修改对象的属性就好了。）
+ 但是这个主要是解决@value的功能。因为spring的单例bean模式。这个对象在启动的时候，就已经实例化了。对象里面对这个bean也没有getset方法。
+ 而且我们也不能实现知道这些属性名称是什么。只能通过@value属性知道
+
+ 怎么解决呢。因为
+ 1.可以使用多例。多例在spring容器的getbean的时候，是没有做缓存的。每次都是一次新的初始化bean
+ 2.也可以扫描所有的带有value的直接。采用反射循环赋值。但是这样几乎没有可行性。
+ 3.可以使用添加@scope的注解。在spring的getbean的时候，可以采用手动添加在自定义的缓存map中。
+ 采用一个可以发布订阅的第三方的数据库。
+
+ 思路总结，
+ 1.创建bean的时候，把添加了@Scope("refresh")的注解放在自定义的容器缓存中，
+ 2.配置中心再修改的时候，订阅节点触发删除容器bean，
+ 3.bean再吃被使用会重新初始化。这样就实现了这些bean中，@value的值是新的了。
+
+ 发布订阅的可以是注册中心。
+ */
+
+
 @Component
 public class CuratorUtil implements ApplicationContextAware {
 
@@ -49,6 +72,9 @@ public class CuratorUtil implements ApplicationContextAware {
 
     private static ConfigurableApplicationContext applicationContext;
 
+    /**
+     * 存放配置文件的属性的map
+     */
     private ConcurrentHashMap map = new ConcurrentHashMap();
 
     private BeanDefinitionRegistry beanDefinitionRegistry;
@@ -82,17 +108,23 @@ public class CuratorUtil implements ApplicationContextAware {
                         forPath(path, "zookeeper config".getBytes());
                 TimeUnit.SECONDS.sleep(1);
             } else {
-                //1、把config下面的子节点加载到spring容器的属性对象中
+                //1、启动项目的时候，把config下面的子节点加载到spring容器的属性对象中
                 addChildToSpringProperty(client, path);
             }
 
 //            nodeCache(client,path);
+            //2.添加一个事件监听。对订阅的节点，修改后，可以进行动态刷新
             childNodeCache(client, path);
         } catch (Exception e) {
             e.printStackTrace();
         }
     }
 
+    /**
+     *
+     * @param client
+     * @param path
+     */
     private void addChildToSpringProperty(CuratorFramework client, String path) {
         if (!checkExistsSpringProperty()) {
             //如果不存在zookeeper的配置属性对象则创建
@@ -115,13 +147,23 @@ public class CuratorUtil implements ApplicationContextAware {
 
     private void createZookeeperSpringProperty() {
         MutablePropertySources propertySources = applicationContext.getEnvironment().getPropertySources();
+        //把我们的自定义 的配置文件的值。存放在OriginTrackedMapPropertySource中的map中。
         OriginTrackedMapPropertySource zookeeperSource = new OriginTrackedMapPropertySource(zkPropertyName, map);
+        //把这个属性添加到spring容器中。
         propertySources.addLast(zookeeperSource);
     }
 
+    /**
+     * spring中所有的属性对象
+     * 一个配置文件一个实体吗。
+     * @return
+     */
     private boolean checkExistsSpringProperty() {
         MutablePropertySources propertySources = applicationContext.getEnvironment().getPropertySources();
         for (PropertySource<?> propertySource : propertySources) {
+            /**
+             * 每一个propertySource就是一个配置文件
+             */
             if (zkPropertyName.equals(propertySource.getName())) {
                 return true;
             }
@@ -175,8 +217,15 @@ public class CuratorUtil implements ApplicationContextAware {
             BeanDefinition beanDefinition = beanDefinitionRegistry.getBeanDefinition(beanDefinitionName);
             if(scopeName.equals(beanDefinition.getScope())) {
                 //先删除,,,,思考，如果这时候删除了bean，有没有问题？
+                //这个方法的调用，就会把把我们的添加了注解的类的@scope配置的自定义RefreshScope类，执行他的remove方法。
                 applicationContext.getBeanFactory().destroyScopedBean(beanDefinitionName);
-                //在实例化初始化每一个bean
+                //再重新的实例化初始化每一个bean
+                /**
+                 * 这个需要在这儿就实例化吗。？
+                 *
+                 * 比如controller。在mvc框架，会获取handler。也会有一个getbean的操作。
+                 * 但是在一个service里面有一个@value。同时这个类，又被其他service有引用。就需要使用这个了。不然就会报null指针异常了。因为这个对象在map中被清除。可能就会被gc掉。
+                 */
                 applicationContext.getBean(beanDefinitionName);
             }
         }
